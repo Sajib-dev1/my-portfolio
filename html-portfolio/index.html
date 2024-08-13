@@ -112,6 +112,36 @@
     ==========================================-->
     <section id="contact">
         <h2>Contact me</h2>
+        <form action="">
+            <div>
+                <label for="name">Name :</label>
+                <input type="text" name="name" id="name" required>
+            </div><br />
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email" required>
+            </div><br />
+            <div>
+                <label for="age">Age :</label>
+                <input type="number" name="age" id="age" min="18" max="80" required>
+            </div> <br />
+            <div>
+                <label for="website">Website Link :</label>
+                <input type="url" name="website" id="website" pattern="https?://.+">
+            </div><br />
+            <div>
+                <label for="message">Message :</label>
+                <textarea name="message" id="message" required></textarea>
+            </div><br />
+            <div>
+                <label for="image">Image :</label>
+                <input type="file" name="image" id="image" accept="image/*" required>
+            </div><br />
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
         <h3>Follow me</h3>
         <ul>
             <li><a href="" target="_blank" title="Facebook">Facebook</a></li>

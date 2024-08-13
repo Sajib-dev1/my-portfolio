@@ -9,13 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my-portfolio</title>
 
-    <!-- font-awesome cdn link  -->
+    <!-- font-awesome cdn link start  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- google font cdn link  -->
+    <!-- font-awesome cdn link end  -->
+    <!-- google font cdn link start  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- google font cdn link end  -->
+    
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
@@ -49,10 +52,11 @@
                 Section : intro start
         ==========================================-->
         <section id="intro">
-            <h1>Sajib Mia</h1>
-            <p><em>Laravel web developer</em></p>
-            <img src="./image/IMG_20240803_070704.jpg" alt="sajib portfolio image" width="250" height="250">
-            <hr>
+            <div class="card">
+                <h1>Sajib Mia</h1>
+                <p><em>Laravel web developer</em></p>
+                <img src="./image/IMG_20240803_070704.jpg" alt="sajib portfolio image" width="250" height="250">
+            </div>
         </section>
         <!-- ========================================
                     Section : intro end
@@ -61,7 +65,7 @@
         <!-- ========================================
                     Section : about me start
         ==========================================-->
-        <section id="about">
+        <section id="about" class="card">
             <h2>About me</h2>
             <p><strong>Experience :</strong> 3 years experience in web development sector</p>
             <p><strong>Education :</strong>HSC</p>
@@ -73,14 +77,14 @@
         <!-- ========================================
                     Section : Skills start
         ==========================================-->
-        <section id="skill">
+        <section id="skill" class="card">
             <h2>Skill</h2>
 
             <table>
                 <thead>
                     <tr>
                         <th>Tecknology</th>
-                        <th>Experience</th>
+                        <th>Proficiancy</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,7 +109,7 @@
         <!-- ========================================
                     Section : Portfolio start
         ==========================================-->
-        <section id="portfolio">
+        <section id="portfolio" class="card">
             <h2>Portfolio</h2>
             <ul>
                 <li>
@@ -129,7 +133,7 @@
         <!-- ========================================
                     Section : blog start
         ==========================================-->
-        <section id="blog">
+        <section id="blog" class="card">
             <h2>Blog</h2>
             <video width="200" controls>
                 <source src="./video/html.mp4" type="video/mp4">
@@ -144,24 +148,17 @@
         <!-- ========================================
                     Section : Contact start
         ==========================================-->
-        <section id="contact">
+        <section id="contact" class="card">
             <h2>Contact me</h2>
             <form action="https://formspree.io/f/mnnavwwb" method="POST">
-                <fieldset>
-                    <legend>Personal information :</legend>
-                    <div>
-                        <label for="name">Name :</label>
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email :</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    <div>
-                        <label for="age">Age :</label>
-                        <input type="number" name="age" id="age" min="18" max="80" required>
-                    </div>
-                </fieldset>
+                <div>
+                    <label for="name">Name :</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
                 <div>
                     <datalist id="language">
                         <option value="C">
@@ -175,32 +172,25 @@
                     <input id="programming" list="language">
                 </div>
                 <div>
-                    <label for="website">Website Link :</label>
-                    <input type="url" name="website" id="website" pattern="https?://.+">
+                    <label for="subject">Chose your subject :</label>
+                    <select name="subject" id="subject">
+                        <option value="">PHP</option>
+                        <option value="">Java</option>
+                        <option value="">JavaScript</option>
+                        <option value="">Python</option>
+                    </select>
                 </div>
                 <div>
                     <label for="message">Message :</label>
                     <textarea name="message" id="message" required></textarea>
                 </div>
                 <div>
-                    <label for="image">Image :</label>
-                    <input type="file" name="image" id="image" accept="image/*" required>
-                </div>
-                <div>
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
                 </div>
             </form>
-            <h3>Follow me</h3>
-            <ul>
-                <li><a href="" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                <li><a href="" target="_self" title="twitter"><i class="fa-brands fa-twitter"></i> twitter</a></li>
-                <li><a href="" target="_blank" title="Linked-in"><i class="fa-brands fa-linkedin-in"></i> Linked-in</a></li>
-                <li><a href="" target="_blank" title="Instragram"><i class="fa-brands fa-instagram"></i> Instragram</a></li>
-                <li><a href="" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
-            </ul>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58480.63660010821!2d90.45145432264654!3d23.638746108994184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b10812a520a3%3A0x6d3af4457bec4c90!2sNarayanganj!5e0!3m2!1sen!2sbd!4v1723540657521!5m2!1sen!2sbd" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="narayangonj"></iframe>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58480.63660010821!2d90.45145432264654!3d23.638746108994184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b10812a520a3%3A0x6d3af4457bec4c90!2sNarayanganj!5e0!3m2!1sen!2sbd!4v1723540657521!5m2!1sen!2sbd" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="narayangonj"></iframe>
 
         </section>
         <!-- ========================================
@@ -209,7 +199,18 @@
     </main>
 
     <footer>
-        Copyright &copy; 2024 - 2024 Sajib <sup>Ⓢ</sup>. All rights reserved.
+        <div class="social-media">
+            <h3>Follow me</h3>
+            <ul>
+                <li><a href="" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                <li><a href="" target="_self" title="twitter"><i class="fa-brands fa-twitter"></i> twitter</a></li>
+                <li><a href="" target="_blank" title="Linked-in"><i class="fa-brands fa-linkedin-in"></i> Linked-in</a></li>
+                <li><a href="" target="_blank" title="Instragram"><i class="fa-brands fa-instagram"></i> Instragram</a></li>
+                <li><a href="" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+            </ul>
+        </div>
+
+       <p> Copyright &copy; 2024 - 2024 Sajib <sup>Ⓢ</sup>. All rights reserved.</p>
         
     </footer>
     

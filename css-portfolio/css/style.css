@@ -1,13 +1,123 @@
 /* =========================================
              Common css start
 ===========================================*/
+:root {
+    --primary-color:#4caf50;
+    --secondary-color:#fff;
+    --background-color:#f4f4f4;
+    --common-color : #333;
+    --font-size-regular:1.2rem;
+    --card-bg-color:#fff;
+    --card-shadow:rgba(0,0,0,0.2);
+    --padding : 0.5rem;
+    --margin: 0.5rem;
+    --border-radius : 0.5rem;
+    --hover-bg-color:#45a048;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--common-color);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,h2{
+    color: var(--primary-color);
+}
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+button:hover{
+    background-color: var(--hover-bg-color);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: var(--padding);
+    margin: 0.5rem 0;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    outline: none;
+}
+ul,
+ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.card{
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.2rem 0.4rem var(--card-shadow);
+    margin: 1.2rem;
+    padding: 1.2rem;
+}
+
 /* =========================================
              Common css end
 ===========================================*/
 
 /* =========================================
+             header css start
+===========================================*/
+header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+nav ul{
+    
+}
+
+nav ul li{
+    margin: 0 0.8rem;
+}
+
+nav ul li a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: var(--font-size-regular);
+}
+/* =========================================
+             header css end
+===========================================*/
+
+/* =========================================
              Main css start
 ===========================================*/
+main{
+    width: 80%;
+    margin: auto;
+    padding: 1.2rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th, 
+td{
+    border: 1px solid #ddd;
+    padding: var(--padding);
+}
+th{
+    background-color: #f2f2f2;
+}
 /* =========================================
              Main css end
 ===========================================*/
@@ -15,6 +125,20 @@
 /* =========================================
              footer css start
 ===========================================*/
+footer{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+.social-media a{
+    color: var(--secondary-color);
+    font-size: var(--font-size-regular);
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0 0.5rem;
+}
 /* =========================================
              footer css end
 ===========================================*/

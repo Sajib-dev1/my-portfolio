@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sajib mia">
+    <meta name="keywords" content="portfolio, html-portfolio, basic-portfolio">
+    <meta name="description" content="portfolio html this site is fantastic website portfolio">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font-awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font cdn link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <title>my-portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About me</a>
+                </li>
+                <li>
+                    <a href="#skill">Skills</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#blog">Blog</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================
+                Section : intro start
+        ==========================================-->
+        <section id="intro">
+            <h1>Sajib Mia</h1>
+            <p><em>Laravel web developer</em></p>
+            <img src="./image/IMG_20240803_070704.jpg" alt="sajib portfolio image" width="250" height="250">
+            <hr>
+        </section>
+        <!-- ========================================
+                    Section : intro end
+        ==========================================-->
+
+        <!-- ========================================
+                    Section : about me start
+        ==========================================-->
+        <section id="about">
+            <h2>About me</h2>
+            <p><strong>Experience :</strong> 3 years experience in web development sector</p>
+            <p><strong>Education :</strong>HSC</p>
+        </section>
+        <!-- ========================================
+                    Section : about me end
+        ==========================================-->
+
+        <!-- ========================================
+                    Section : Skills start
+        ==========================================-->
+        <section id="skill">
+            <h2>Skill</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecknology</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td rowspan="2">Expert</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- ========================================
+                    Section : Skills end
+        ==========================================-->
+
+        <!-- ========================================
+                    Section : Portfolio start
+        ==========================================-->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <ul>
+                <li>
+                    <a href="#" target="_self">Blog website</a>
+                </li>
+                <li>
+                    <a href="#" target="_self">Portfolio website</a>
+                </li>
+                <li>
+                    <a href="#" target="_self">E-commerch website</a>
+                </li>
+                <li>
+                    <a href="#" target="_self">Newsportal website</a>
+                </li>
+            </ul>
+        </section>
+        <!-- ========================================
+                    Section : Portfolio end
+        ==========================================-->
+
+        <!-- ========================================
+                    Section : blog start
+        ==========================================-->
+        <section id="blog">
+            <h2>Blog</h2>
+            <video width="200" controls>
+                <source src="./video/html.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta optio vero omnis odit ex odio, minus, sunt quas assumenda earum laborum dolore totam. Facere eligendi nulla quibusdam culpa impedit, sequi omnis aut est sit laborum, minima velit nobis illum qui! Cum et, modi impedit maxime est cupiditate! Id enim laborum, similique deserunt maiores quo. Voluptates odio unde earum! Ea soluta a rem voluptate labore corrupti vitae inventore sunt omnis ipsam voluptates aliquam explicabo asperiores, pariatur fuga beatae quam esse placeat. Iusto, ea qui ipsam nobis hic culpa est distinctio quo laborum natus itaque a accusantium veniam reiciendis. Veniam, assumenda distinctio!</p>
+        </section>
+        <!-- ========================================
+                    Section : blog end
+        ==========================================-->
+
+        <!-- ========================================
+                    Section : Contact start
+        ==========================================-->
+        <section id="contact">
+            <h2>Contact me</h2>
+            <form action="https://formspree.io/f/mnnavwwb" method="POST">
+                <fieldset>
+                    <legend>Personal information :</legend>
+                    <div>
+                        <label for="name">Name :</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="age">Age :</label>
+                        <input type="number" name="age" id="age" min="18" max="80" required>
+                    </div>
+                </fieldset>
+                <div>
+                    <datalist id="language">
+                        <option value="C">
+                        <option value="C++">
+                        <option value="Java">
+                        <option value="JavaScript">
+                        <option value="PHP">
+                        <option value="Python">
+                    </datalist>
+                    <label for="programming">Select your Programming Language :</label>
+                    <input id="programming" list="language">
+                </div>
+                <div>
+                    <label for="website">Website Link :</label>
+                    <input type="url" name="website" id="website" pattern="https?://.+">
+                </div>
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+                <div>
+                    <label for="image">Image :</label>
+                    <input type="file" name="image" id="image" accept="image/*" required>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+            <h3>Follow me</h3>
+            <ul>
+                <li><a href="" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                <li><a href="" target="_self" title="twitter"><i class="fa-brands fa-twitter"></i> twitter</a></li>
+                <li><a href="" target="_blank" title="Linked-in"><i class="fa-brands fa-linkedin-in"></i> Linked-in</a></li>
+                <li><a href="" target="_blank" title="Instragram"><i class="fa-brands fa-instagram"></i> Instragram</a></li>
+                <li><a href="" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+            </ul>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58480.63660010821!2d90.45145432264654!3d23.638746108994184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b10812a520a3%3A0x6d3af4457bec4c90!2sNarayanganj!5e0!3m2!1sen!2sbd!4v1723540657521!5m2!1sen!2sbd" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="narayangonj"></iframe>
+        </section>
+        <!-- ========================================
+                    Section : Contact end
+        ==========================================-->
+    </main>
+
+    <footer>
+        Copyright &copy; 2024 - 2024 Sajib <sup>Ⓢ</sup>. All rights reserved.
+    </footer>
+    
+</body>
+</html>

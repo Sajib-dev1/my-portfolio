@@ -1,69 +1,82 @@
 /* =========================================
              Common css start
 ===========================================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
-    --primary-color:#4caf50;
-    --secondary-color:#fff;
+    --primary-color:#C5EBAA;
+    --secondary-color:#333333;
+    --paragraph-color: #555;
+    --regular-font-size: 1.2rem;
+    --common-color: #fff;
+    --hover-bg-color:#F6F193;
+    --border-radius : 0.3rem;
     --background-color:#f4f4f4;
-    --common-color : #333;
-    --font-size-regular:1.2rem;
-    --card-bg-color:#fff;
-    --card-shadow:rgba(0,0,0,0.2);
     --padding : 0.5rem;
     --margin: 0.5rem;
-    --border-radius : 0.5rem;
-    --hover-bg-color:#45a048;
-}
+    --card-background-color:#fff;
+    --card-shadow:rgba(0,0,0,0.2);
+    /*
 
+
+     */
+}
 body{
     background-color: var(--background-color);
-    color: var(--common-color);
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-
 }
-
-h1,h2{
-    color: var(--primary-color);
-}
-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem 0;
-}
-button:hover{
-    background-color: var(--hover-bg-color);
-}
-
-input,
-textarea,
-select {
-    width: 100%;
-    padding: var(--padding);
-    margin: 0.5rem 0;
-    border-radius: var(--border-radius);
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    outline: none;
-}
-ul,
-ol{
+ol,ul{
     list-style: none;
-    padding: 0;
-    margin: 0;
+}
+h2,h3,h4,h5,h6{
+    color: var(--secondary-color);
+}
+p{
+    color: var(--paragraph-color);
+}
+
+a{
+    text-decoration: none;
+    font-size: var(--regular-font-size);
+    font-weight: 400;
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+.header h2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem 0;
 }
 .card{
-    background-color: var(--card-bg-color);
+    background-color: var(--card-background-color);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: 0 0.2rem 0.4rem var(--card-shadow);
-    margin: 1.2rem;
-    padding: 1.2rem;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
 }
 
+table, th, td{
+    border: 1px solid #ddd;
+    padding: var(--padding);
+    font-size: var(--regular-font-size);
+}
+th{
+    background-color: #f4f4f4;
+}
 /* =========================================
              Common css end
 ===========================================*/
@@ -73,23 +86,30 @@ ol{
 ===========================================*/
 header{
     background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
 }
-nav ul{
-    
+.main__header{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
 }
-
-nav ul li{
-    margin: 0 0.8rem;
+.main__header nav ul{
+    display: flex;
 }
-
-nav ul li a{
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: var(--font-size-regular);
+.main__header nav ul li a{
+    text-transform: capitalize;
+    color: var(--paragraph-color);
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: all linear .3s;
+}
+.main__header nav ul li a:hover{
+    color: var(--hover-bg-color);
+    text-decoration: underline;
 }
 /* =========================================
              header css end
@@ -99,24 +119,122 @@ nav ul li a{
              Main css start
 ===========================================*/
 main{
-    width: 80%;
-    margin: auto;
-    padding: 1.2rem;
+
+}
+#intro{
+    background-image: url(../image/brackground-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.intro__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+.intro__text h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--common-color);
+}
+.intro__text p{
+    font-size: 1.5rem;
+    color: var(--common-color);
+    padding-top: 1rem;
+}
+.intro__text a{
+    font-size: var(--regular-font-size);
+    text-transform: capitalize;
+    color: var(--common-color);
+    border: 1px #fff solid;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+}
+.intro__text a:hover{
+    background-color: var(--hover-bg-color);
+    color: var(--secondary-color);
+    border: 1px var(--hover-bg-color) solid;
 }
 
-table{
-    width: 100%;
-    border-collapse: collapse;
+/* ***********About part*********** */
+.about__row{
+    gap: 1.5rem;
+}
+.about__text{
+    width: 50%;
+}
+.about__text p{
+    font-size: var(--regular-font-size);
+    margin-bottom: 1.5rem;
+}
+.about__img{
+    width: 50%;
 }
 
-table,
-th, 
-td{
+/* ****** Portfolio List***** */
+.portfolio__list ul li a{
+    font-size: var(--regular-font-size);
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+    transition: all linear .3s;
+}
+.portfolio__list ul li a:hover{
+    color: #A5DD9B;
+}
+/* ***** Blog ****** */
+.blog__video {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.blog__video video{
+    border: 1rem #ddd solid;
+    border-radius: var(--border-radius);
+}
+.blog__text .blog__title h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.blog__text .blog__desp p{
+    font-size: var(--regular-font-size);
+    font-weight: 400;
+}
+.blog__text .blog__desp p::first-letter{
+    font-size: 2rem;
+    color: #F2C18D;
+}
+/* ****** Contact Form **** */
+.contact__form{
+    width: 60%;
     border: 1px solid #ddd;
-    padding: var(--padding);
+    margin: auto;
+    padding: 1.5rem;
 }
-th{
-    background-color: #f2f2f2;
+input,select,textarea{
+    width: 100%;
+    padding: var(--padding);
+    margin-bottom: var(--margin);
+    border: 1px solid #ddd;
+    outline: none;
+}
+button{
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all linear .3s;
+}
+button:hover{
+    background-color: #A5DD9B;
+    border: 1px solid #A5DD9B;
 }
 /* =========================================
              Main css end
@@ -127,17 +245,57 @@ th{
 ===========================================*/
 footer{
     background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    width: 100%;
-    padding: 0.5rem 0;
+    padding-top: 2rem;
 }
-.social-media a{
+.foot__main{
+    display: flex;
+    gap: 1.5rem;
+    width: 70%;
+    margin: auto;
+}
+.social-media{
+    width: 50%;
+}
+.social-media h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.social-media ul{
+    display: flex;
+    gap: 0.8rem;
+    margin-top: -0rem;
+}
+.social-media ul li a{
     color: var(--secondary-color);
-    font-size: var(--font-size-regular);
-    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all linear .3s;
+}
+.social-media ul li a:hover{
+    color: var(--hover-bg-color);
+}
+.social-media p{
+    font-size: var(--regular-font-size);
     font-weight: 400;
-    margin: 0 0.5rem;
+    padding-top: 1.5rem;
+}
+.map{
+    width: 50%;
+}
+.map iframe{
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+.coppyright{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #A5DD9B;
+    bottom: 0;
+    font-size: var(--regular-font-size);
+}
+.coppyright span, sup{
+    color:#F2C18D;
 }
 /* =========================================
              footer css end
